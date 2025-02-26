@@ -1,50 +1,73 @@
-# React + TypeScript + Vite
+# ODR Rescue Boxes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
 
-Currently, two official plugins are available:
+**ODR Rescue Boxes** is a Next.js-based application that allows users to find the nearest ODR (On-Demand Rescue) boxes. These boxes are strategically placed in different locations to provide emergency supplies and assistance. The platform helps users quickly locate the closest rescue box to ensure timely aid.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Locate ODR Rescue Boxes:** Users can search and view the nearest ODR boxes on an interactive map.
+- **Next.js for Frontend:** The project leverages Next.js for an optimized and dynamic front-end experience.
+- **Environment Configuration:** Uses environment variables for API keys and other sensitive data.
+- **Fast and Responsive UI:** Ensures smooth performance across devices.
+- **Deployment Ready:** Can be deployed easily using platforms like Vercel.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Getting Started
 
-- Configure the top-level `parserOptions` property like this:
+### Prerequisites
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Make sure you have the following installed:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- [Node.js](https://nodejs.org/) (Latest LTS version recommended)
+- [Git](https://git-scm.com/)
+- A package manager like `npm`, `yarn`, or `pnpm`
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Installation
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/yourusername/odr-rescue-boxes.git
+   cd odr-rescue-boxes
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Set up environment variables:
+
+   - Copy the `.env.sample` file and rename it to `.env.local`.
+   - Fill in the necessary environment variables as per the project requirements.
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to access the application.
+
+## Deployment
+
+The project will be deployed on GCP cloud.
+
+## Contributing
+
+Contributions are welcome! Follow these steps:
+
+1. Fork the repository.
+2. Create a new feature branch (`git checkout -b feat/branch`).
+3. Make your changes and commit (`git commit -m "Add new feature"`).
+4. Push to the branch (`git push origin feat/branch`).
+5. Open a Pull Request.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+Now you're ready to start contributing to ODR Rescue Boxes! 🚀
