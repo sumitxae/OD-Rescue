@@ -1,0 +1,29 @@
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: fastapi-app
+# spec:
+#   replicas: 3
+#   selector:
+#     matchLabels:
+#       app: fastapi-app
+#   template:
+#     metadata:
+#       labels:
+#         app: fastapi-app
+#     spec:
+#       containers:
+#       - name: fastapi-app
+#         image: gcr.io/YOUR_PROJECT_ID/fastapi-app:latest
+#         ports:
+#         - containerPort: 80
+#         env:
+#         - name: DATABASE_URL
+#           value: "sqlite:///./test.db"  # Replace with your actual database URL
+#         resources:
+#           requests:
+#             memory: "64Mi"
+#             cpu: "250m"
+#           limits:
+#             memory: "128Mi"
+#             cpu: "500m"
